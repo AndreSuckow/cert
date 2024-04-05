@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Certificado</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <div class="lds-dual-ring abs"></div>
+    <div id="container" sandbox="allow-same-origin allow-scripts" class="transp">
+        <div class="_form">
+            <img src="./img/logo_explore.png" alt="" class="logo">
+            <h1 class="h1">Bem-vindo!</h1>
+            <h2 class="h2">Preencha com seus dados <br />para obter o certificado.</h2>
+            <label for="name" class="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Insira seu nome completo">
+
+            <p class="error" style="opacity: 0;">Nome deve ter mínimo de 3 e máximo de 40 letras. <br />Não pode conter
+                símbolos ou números, digite novamente. </p>
+
+            <label for="date" class="date">Data:</label>
+            <!-- <input type="date" id="date" name="date" placeholder="dd-mm-yyyy" value="" disabled /> -->
+            <p id="date"></p>
+
+            <button class="gerar" onclick="gerar()">Gerar!</button>
+            <img src="cert.jpg" alt="" class="preload">
+        </div>
+    </div>
+
+    <div id="contentDownload" class="ct">
+        <img src="cert.jpg" alt="" class="cert_img">
+        <p class="abs cName">Pietro Gonzales Garcia Silva</p>
+        <p class="abs cDate">23-01-2024</p>
+    </div>
+
+    <script src="./js/libs/html2canvas.js"></script>
+    <script src="js/libs/jquery_min_3_6.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                initMain()
+            }, 250);
+        }
+    </script>
+</body>
+
+</html>

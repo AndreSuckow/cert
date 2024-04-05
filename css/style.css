@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* #region Cores */
+:root {
+    --roxo-vivo: #609;
+    --amarelo-vivo: #FADC50;
+    --magenta-vivo: #EB3C7D;
+}
+
+/* #endregion */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* No text select */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Book", Arial;
+    color: #660099;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Roboto-Reg', Arial, Helvetica, sans-serif;
+    color: black;
+    /* background-image: url("../img/logo_explore.png");
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: ; */
+}
+
+#preload {
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+#container {
+    position: absolute;
+    /* background-color: white; */
+    width: 1365px;
+    height: 767px;
+    /* cursor: url('../img/seta.png'), auto; */
+    /* background-image: url('../img/bg.png'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 3px dashed #d50c9c; */
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 9;
+}
+
+.transp {
+    opacity: 0 !important;
+}
+
+.divImg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+}
+
+.abs {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.frame {
+    top: 50%;
+    left: 50%;
+    border: none;
+}
+
+.exit {
+    top: 4%;
+    left: 98%;
+    background-color: #710096;
+    width: 7vw;
+    height: 7vw;
+    font-size: 32px;
+    border-radius: 0px 0px 0px 45px;
+    color: white;
+    cursor: url('../img/pointer.png'), auto;
+    transition: .25s;
+}
+
+.exit p {
+    top: 56%;
+    left: 50%;
+    font-family: 'Bold', 'arial'
+}
+
+.exit:hover {
+    border-radius: 0px 0px 0px 0px;
+}
+
+/* loadanim */
+.lds-dual-ring {
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 6px solid #660099;
+    border-color: #660099 transparent #660099 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
